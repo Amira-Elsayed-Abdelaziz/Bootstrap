@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/all.min.css"> -->
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <!-- <script src="js/all.min.js"></script> -->
+    <title>Bootstrap</title>
+</head>
+
+<body>
+    <!-- <div class="container   border "> -->
+    <nav class="navbar col-12 d-flex ">
+        <ul class="nav navbar-nav col-4 d-flex flex-row justify-content-between flex-wrap">
+            <li class="nav-item"><a href="#" class="nav-link ms-2"><img width="45px" src="images.png"></a></li>
+            <li class="nav-item "><a href="#" class="nav-link  fs-5"> Home</a></li>
+            <li class="nav-item text-white"><a href="#" class="nav-link  fs-5">offer</a></li>
+            <li class="nav-item "><a href="#" class="nav-link  fs-5">contact</a></li>
+        </ul>
+        <form class="navbar-nav d-flex flex-row justify-content-between" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary me-2" type="submit">Search</button>
+        </form>
+    </nav>
+    <!-- </div> -->
+    <form class="d-flex bg-light flex-column align-items-center col-12 border border-warning needs-validation  "
+        novalidate>
+        <h1 class="text-center pt-4">Sign Up</h1>
+        <div class="col-11 mb-3">
+            <label for="validationCustom01" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="validationCustom01" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please Enter Your First Name.
+            </div>
+        </div>
+        <div class="col-11 mb-3">
+            <label for="validationCustom02" class="form-label">Last name</label>
+            <input type="text" class="form-control" id="validationCustom02" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please Enter Your Last Name.
+            </div>
+        </div>
+        <div class="col-11 mb-3">
+            <label for="validationCustom03" class="form-label">Password</label>
+            <input type="Password" class="form-control" id="validationCustom03" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please provide a valid Password.
+            </div>
+        </div>
+        <div class="col-11 mb-3">
+            <label for="validationCustom04" class="form-label">Email</label>
+            <input type="email" class="form-control" id="validationCustom04" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please provide a valid Email.
+            </div>
+        </div>
+        <div class="col-11 mb-3">
+            <label class="me-5">Gender</label>
+            <input type="radio" name="Gender" class="form-check-input" id="f">
+            <label class="me-5" for="f" class="form-label">Female</label>
+            <input type="radio" name="Gender" class="form-check-input" id="m">
+            <label for="m" class="form-label">Male</label>
+        </div>
+
+        <div class="col-11 mb-3">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                    You must agree before submitting.
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary " type="submit">Submit form</button>
+
+    </form>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+</body>
+
+</html>
